@@ -1,5 +1,6 @@
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Tooltip, Legend } from 'chart.js';
+import { colors } from '../utils/constants';
 
 // Register the components you need
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
@@ -11,7 +12,7 @@ const SpendingBarChart = () => {
             {
                 label: 'Spending',
                 data: [200, 350], // Example spending amounts
-                backgroundColor: ['#25C935', '#545454'], // Colors for each bar
+                backgroundColor: [`${colors.primary}`, '#545454'], // Colors for each bar
                 borderRadius: { topLeft: 10, topRight: 10 }, // Rounded top for each bar
                 barThickness: 30, // Width of each bar
             },

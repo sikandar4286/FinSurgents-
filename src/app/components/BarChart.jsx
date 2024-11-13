@@ -2,6 +2,7 @@ import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { colors } from '../utils/constants';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ChartDataLabels);
 
@@ -30,12 +31,12 @@ export default function YearlyBarChart() {
                 backgroundColor: Array(12)
                     .fill('#D9D9D9') // Default color for all bars
                     .map((color, index) =>
-                        index === currentMonthIndex ? '#25C935' : color  // Highlight current month in red
+                        index === currentMonthIndex ? colors.primary : color  // Highlight current month in red
                     ),
                 borderColor: Array(12)
                     .fill('#D9D9D9')
                     .map((color, index) =>
-                        index === currentMonthIndex ? '#25C935' : color  // Red border for current month
+                        index === currentMonthIndex ? colors.primary : color  // Red border for current month
                     ),
 
                 borderWidth: 1,
@@ -67,7 +68,7 @@ export default function YearlyBarChart() {
                     size: 12,
                 },
                 padding: 8, // Padding inside the box
-                backgroundColor: '#25C935', // Box color
+                backgroundColor: colors.primary, // Box color
                 color: 'white',
                 borderRadius: 12, // Rounded corners for the box
                 borderWidth: 1, // Border width for the box
