@@ -1,11 +1,15 @@
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Tooltip, Legend } from 'chart.js';
 import { colors } from '../utils/constants';
+import { useTheme } from '../hooks/ThemeContext';
 
 // Register the components you need
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
 const SpendingBarChart = () => {
+
+    const { theme } = useTheme();
+
     const data = {
         labels: ['Shopping', 'Food'], // Only two categories on the y-axis
         datasets: [
@@ -65,7 +69,7 @@ const SpendingBarChart = () => {
             y: {
                 beginAtZero: true,
                 ticks: {
-                    color: '#000', // Customize color for the y-axis labels
+                    color: theme === 'light' ? '#000' : 'white', // Customize color for the y-axis labels
                     font: {
                         size: 14,
                     },

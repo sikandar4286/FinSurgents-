@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -9,7 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* --background: #0a0a0a; */
+    --background: #0a0a0a;
     --background: #ededed;
     --foreground: #ededed;
   }
@@ -19,4 +19,44 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* Tailwind imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default Light Theme Variables */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #1a73e8;
+  --secondary: #ff6f61;
+}
+
+/* Dark Theme Variables */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --primary: #8ab4f8;
+  --secondary: #ffab91;
+}
+
+/* Global Body Styles */
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Example Tailwind-Based Components with Variables */
+.button {
+  background-color: var(--primary);
+  color: var(--foreground);
+}
+
+.button:hover {
+  background-color: var(--secondary);
+  color: var(--background);
 }
