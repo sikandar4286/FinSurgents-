@@ -12,71 +12,46 @@ const SpendingBarChart = () => {
     const { theme } = useTheme();
 
     const data = {
-        labels: ['Shopping', 'Food'], // Only two categories on the y-axis
+        labels: ['Shopping', 'Food'],
         datasets: [
             {
                 label: 'Spending',
-                data: [200, 350], // Example spending amounts
-                backgroundColor: [`${colors.primary}`, '#545454'], // Colors for each bar
-                borderRadius: { topLeft: 10, topRight: 10 }, // Rounded top for each bar
-                barThickness: 30, // Width of each bar
+                data: [200, 350],
+                backgroundColor: [`${colors.primary}`, '#545454'],
+                borderRadius: { topLeft: 9, topRight: 9 },
+                barThickness: 23,
             },
         ],
     };
 
     const options = {
-        indexAxis: 'y', // Make the bars horizontal, showing labels on the y-axis
+        indexAxis: 'y',
         responsive: true,
-        // plugins: {
-        //     legend: {
-        //         display: false, // Hide the legend
-        //     },
-        //     tooltip: {
-        //         enabled: true, // Enable tooltips for more details on hover
-        //     },
-        // },
         plugins: {
             legend: {
-                display: false, // Hide the legend
+                display: false,
             },
             tooltip: {
-                enabled: true, // Enable tooltips for more details on hover
+                enabled: true,
             },
             datalabels: {
-                display: false, // Disable the value labels on bars (if using chartjs-plugin-datalabels)
+                display: false,
             },
         },
-        // scales: {
-        //     x: {
-        //         display: false, // Hide x-axis
-        //     },
-        //     y: {
-        //         beginAtZero: true,
-        //         // ticks: {
-        //         //     color: '#000', // Customize color for the y-axis labels
-        //         //     font: {
-        //         //         size: 14,
-        //         //     },
-        //         // },
-        //         grid: {
-        //             display: false, // Optionally hide grid lines
-        //         },
-        //     },
-        // },
         scales: {
             x: {
-                display: false, // Hide x-axis
+                display: false,
             },
             y: {
                 beginAtZero: true,
                 ticks: {
-                    color: theme === 'light' ? '#000' : 'white', // Customize color for the y-axis labels
+                    color: theme === 'light' ? '#000' : 'white',
                     font: {
                         size: 14,
                     },
                 },
                 grid: {
-                    display: false, // Optionally hide grid lines
+                    display: false,
                 },
             },
         },

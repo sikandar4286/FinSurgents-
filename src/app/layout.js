@@ -183,10 +183,10 @@ export default function RootLayout({ children }) {
                     width={30}
                     height={30}
                   />
-                  <p className='text-white text-lg font-medium'>FinSurgents</p>
+                  <p className='text-white text-lg font-semibold'>FinSurgents</p>
                 </div>
                 <nav className="flex flex-1 flex-col">
-                  <div className="text-xs/6 font-semibold text-white py-3">Manage</div>
+                  <div className="text-lg font-bold text-white font-poppins py-3">Manage</div>
                   <ul role="list" className="flex flex-1 flex-col gap-y-7">
                     <li>
                       <ul role="list" className="-mx-2 space-y-1">
@@ -201,14 +201,16 @@ export default function RootLayout({ children }) {
                                 'group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold',
                               )}>
                               <IconComponent icon={item.icon} color={item.current ? colors.primary : '#C1C1C1'} />
-                              {item.name}
+                              <p className="font-poppins font-normal">
+                                {item.name}
+                              </p>
                             </Link>
                           </li>
                         ))}
                       </ul>
                     </li>
                     <li>
-                      <div className="text-xs/6 font-semibold text-white">Preferences</div>
+                      <div className="text-lg font-bold text-white font-poppins">Preferences</div>
                       <ul role="list" className="-mx-2 mt-2 space-y-1">
                         {teams.map((team) => (
                           <li key={team.name}>
@@ -228,7 +230,11 @@ export default function RootLayout({ children }) {
                                   height={10}
                                 />
                               </span>
-                              <span className="truncate">{team.name}</span>
+                              <span className="truncate">
+                                <p className="font-poppins font-normal">
+                                  {team.name}
+                                </p>
+                              </span>
                             </Link>
                           </li>
                         ))}
@@ -274,9 +280,11 @@ export default function RootLayout({ children }) {
 
                 <div className="flex flex-1 gap-x-4 self-stretch lg:gap-x-6 items-center dark:bg-black dark:text-white">
                   <div className='relative flex flex-1 items-center text-black font-bold dark:text-white'>
-                    Dashboard
+                    <p className="font-semibold text-2xl font-poppins">
+                      Dashboard
+                    </p>
                   </div>
-                  <div className="flex items-center gap-x-1 lg:gap-x-1">
+                  <div className="flex items-center gap-x-2 lg:gap-x-2">
                     <button type="button" className="p-1 text-black bg-gray-200 dark:bg-black dark:text-white dark:border-[0.5px] dark:border-white rounded-md hover:text-gray-500">
                       <span className="sr-only">View notifications</span>
                       <MagnifyingGlassIcon aria-hidden="true" className="h-5 w-5" />

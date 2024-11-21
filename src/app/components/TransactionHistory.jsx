@@ -41,8 +41,8 @@ const people = [
 
 function TransactionHistory() {
     return (
-        <div className='p-3 mt-5 rounded-md bg-white dark:bg-black dark:text-white border-[0.5px] border-gray-200 dark:border-[0.5px] dark:border-white'>
-            <h2 className="text-base font-semibold text-gray-900 dark:text-white">Transaction History</h2>
+        <div className='shadow-md p-3 mt-5 rounded-md bg-white dark:bg-black dark:text-white border-[0.5px] border-gray-200 dark:border-[0.5px] dark:border-white'>
+            <h2 className="text-lg font-bold font-poppins text-gray-900 dark:text-white">Transaction History</h2>
             <div className="mt-4 pt-5">
                 <div className="mx-2 my-2 overflow-x-auto sm:mx-0 lg:mx-0">
                     <div className="inline-block min-w-full py-0 align-middle sm:px-2 lg:px-2">
@@ -56,12 +56,12 @@ function TransactionHistory() {
                                                     <img alt="" src={person.image} className="h-8 w-8 rounded-full" />
                                                 </div>
                                                 <div className="ml-4">
-                                                    <div className="font-medium text-gray-900 dark:text-white">{person.name}</div>
+                                                    <div className="text-base font-bold font-poppins text-gray-900 dark:text-white">{person.name}</div>
                                                 </div>
                                             </div>
                                         </td>
                                         <td className="whitespace-nowrap px-3 py-1 text-sm text-gray-500 dark:text-white">
-                                            <div className="text-gray-900 dark:text-white">{person.title}</div>
+                                            <div className="text-base font-bold font-poppins text-gray-900 dark:text-white">{person.title}</div>
                                         </td>
                                         <td className="whitespace-nowrap px-3 py-1 text-sm text-gray-500 dark:text-white">
                                             <span className="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">
