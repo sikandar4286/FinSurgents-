@@ -84,14 +84,14 @@ const Dashboard = () => {
                                     {item.name}
                                 </dt>
 
-                                <dd className="mt-2 text-xl font-poppins font-semibold tracking-tight text-gray-900 group-hover:text-white dark:text-white dark:group-hover:text-cyan-300">
+                                <dd className="mt-2 text-2xl font-poppins font-bold tracking-tight text-gray-900 group-hover:text-white dark:text-white dark:group-hover:text-cyan-300">
                                     {item.stat}
                                 </dd>
                             </div>
                         ))}
 
                     </dl>
-                    <div className='min-h-[425px] flex flex-col justify-between shadow-md ring-1 ring-gray-900/5 bg-white p-2 mt-2 rounded-md  dark:bg-black dark:ring-1 dark:ring-white'>
+                    <div className='mt-5 min-h-[425px] flex flex-col justify-between shadow-md ring-1 ring-gray-900/5 bg-white p-2 mt-2 rounded-md  dark:bg-black dark:ring-1 dark:ring-white'>
                         <h2 className="text-2xl font-bold font-poppins text-gray-900 dark:text-white">Overview</h2>
                         <YearlyBarChart />
                     </div>
